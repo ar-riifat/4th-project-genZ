@@ -19,6 +19,9 @@ const SubHeading = styled(Typography)`
     font-size: 10px;
     font-style: italic;
 `
+const CustomButtonWrapper = styled(Box)`
+     margin: 0 5% 0 auto;
+`
 
 
 const Header  = () => {
@@ -39,9 +42,9 @@ const Header  = () => {
                 </Component>
 
                 <Search/>
-                <Box>
+                <CustomButtonWrapper>
                     <CustomButton/>
-                </Box>
+                </CustomButtonWrapper>
                 
             </Toolbar>
         </StyledHeader>
