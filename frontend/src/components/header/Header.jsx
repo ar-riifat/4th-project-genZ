@@ -1,12 +1,21 @@
 
 import {AppBar,Toolbar} from '@mui/material';
 const Header  = ()=> {
+    
     return(
-        <AppBar>
+        <styleHeader>
             <Toolbar>
-
+                <component>
+                    <img src="picture.jpg" alt="logo" style={{ width: 75}} />
+                    <box>
+                        <subHeding>Explore&nbsp;
+                            <Box component="span" style={{ color: '#FFE500'}}>Plus</Box>
+                        </subHeding>
+                        <img src=" " alt="" />
+                    </box>
+                </component>
             </Toolbar>
-        </AppBar>
+        </styleHeader>
         
     )
 }
