@@ -1,15 +1,17 @@
 
 
-import { AppBar, Box, Typography, Toolbar, styled} from '@mui/material';
+import { AppBar, Typography, Toolbar, styled, Box} from '@mui/material';
 
-const styledHeader = styled(AppBar)`
-     background: "#0000ff";
-     height: 55px;
-     `;
+import Search  from './Search';
+
+const StyledHeader = styled(AppBar)`
+background: #d9603b;
+height: 55px;
+`;
     
 const Component = styled(Box)`
-    margin-left: 12%;
-    line-height: 0;
+     margin-left:12%;
+     line-height:0;
     `
 
 const SubHeading = styled(Typography)`
@@ -17,25 +19,27 @@ const SubHeading = styled(Typography)`
     font-style: italic;
 `
 
+
 const Header  = () => {
 
-    const logoURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png';
-    const subURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/plus_aef861.png'; 
+     const logoURL = "https://www.logodesignteam.com/images/portfolio-images/ecommerce-websites-logo-design/ecommerce-websites-logo-design20.jpg";
 
     return(
-        <styleHeader>
+        <StyledHeader>
             <Toolbar>
                 <Component>
-                    <img src={logoURL} alt="logo" style={{ width: 75}} />
+                    <img src={logoURL} alt="logo" style={{ width: 50}} />
                     <Box>
                         <SubHeading>Explore&nbsp;
                             <Box component="span" style={{ color: '#FFE500'}}>Plus</Box>
                         </SubHeading>
-                        <img src={subURL} alt="sub-logo" />
+
                     </Box>
                 </Component>
+
+                <Search/>
             </Toolbar>
-        </styleHeader>
+        </StyledHeader>
         
     )
 }
