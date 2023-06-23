@@ -3,6 +3,7 @@
 import { AppBar, Typography, Toolbar, styled, Box} from '@mui/material';
 
 import Search  from './Search';
+import CustomButton from './CustomButtons';
 
 const StyledHeader = styled(AppBar)`
 background: #d9603b;
@@ -26,7 +27,7 @@ const Header  = () => {
 
     return(
         <StyledHeader>
-            <Toolbar>
+            <Toolbar style={{minHeight: 55}}>
                 <Component>
                     <img src={logoURL} alt="logo" style={{ width: 50}} />
                     <Box>
@@ -38,6 +39,10 @@ const Header  = () => {
                 </Component>
 
                 <Search/>
+                <Box>
+                    <CustomButton/>
+                </Box>
+                
             </Toolbar>
         </StyledHeader>
         
