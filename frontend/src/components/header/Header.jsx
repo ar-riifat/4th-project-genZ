@@ -3,7 +3,7 @@
 import { AppBar, Box, Typography, Toolbar, styled} from '@mui/material';
 
 const styledHeader = styled(AppBar)`
-     background: "#2874f0";
+     background: "#0000ff";
      height: 55px;
      `;
     
@@ -17,7 +17,7 @@ const SubHeading = styled(Typography)`
     font-style: italic;
 `
 
-const Header  = ()=> {
+const Header  = () => {
 
     const logoURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png';
     const subURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/plus_aef861.png'; 
@@ -27,12 +27,12 @@ const Header  = ()=> {
             <Toolbar>
                 <Component>
                     <img src={logoURL} alt="logo" style={{ width: 75}} />
-                    <box>
-                        <subHeading>Explore&nbsp;
+                    <Box>
+                        <SubHeading>Explore&nbsp;
                             <Box component="span" style={{ color: '#FFE500'}}>Plus</Box>
-                        </subHeading>
+                        </SubHeading>
                         <img src={subURL} alt="sub-logo" />
-                    </box>
+                    </Box>
                 </Component>
             </Toolbar>
         </styleHeader>
