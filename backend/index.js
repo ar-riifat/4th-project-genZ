@@ -6,4 +6,4 @@ const app = express();
 
 const PORT = 8000
 
-app.listen(PORT, () => CSSFontPaletteValuesRule.log ('Server Is running successfully on PORT ${PORT}'));
+app.listen(PORT, () => console.log (`Server Is running successfully on PORT ${PORT} Hello`));
