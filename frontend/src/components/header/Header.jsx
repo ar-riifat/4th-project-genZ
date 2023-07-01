@@ -26,7 +26,7 @@ const CustomButtonWrapper = styled(Box)`
 
 const Header  = () => {
 
-     const logoURL = "https://www.logodesignteam.com/images/portfolio-images/ecommerce-websites-logo-design/ecommerce-websites-logo-design20.jpg";
+     const logoURL = "https://i.ibb.co/KV7DwfN/genz.png";
 
     return(
         <StyledHeader>
