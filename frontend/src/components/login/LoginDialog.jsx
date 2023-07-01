@@ -3,6 +3,9 @@ import { useState } from "react";
 
 import { Box, Dialog,TextField,Button, Typography,styled} from "@mui/material"; 
 
+import { authenticateSignup } from "../../../../backend/api";
+import { Sign } from "crypto";
+
 const Component= styled(Box)`
 height:70vh;
 width:90vh;`
@@ -97,7 +100,11 @@ const toggleSignup = () => {
 
 const onInputChange = (e) => {
     setSignup({ ...signup, [e.target.name]: e.target.value });
-    console.log(signup);
+    
+}
+
+const signupUser = async () => {
+  let response = await authenticateSignup(signup);
 }
 
 
