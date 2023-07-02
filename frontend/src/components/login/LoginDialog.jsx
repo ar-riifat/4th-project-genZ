@@ -125,8 +125,8 @@ const signupUser =async() => {
              <Text>By continuing, you agree to our's Terms of Use and Privacy Policy.</Text>
              <LoginButton>Login</LoginButton>
              <Typography style={{textAlign:'center'}}>OR</Typography>
-             <RequestOTP>Request OTP</RequestOTP>
-             <CreateAccount onClick={() => toggleSignup()}>New to Magna? Create an account</CreateAccount>
+             <RequestOTP>Reset</RequestOTP>
+             <CreateAccount onClick={() => toggleSignup()}>New to genZquest? Create an account</CreateAccount>
              
              </Wrapper>
 
