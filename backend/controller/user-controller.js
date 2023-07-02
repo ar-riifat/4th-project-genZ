@@ -1,3 +1,3 @@
-export const userSignup = () => {
-    
+export const userSignup = (request, response) => {
+
 }
