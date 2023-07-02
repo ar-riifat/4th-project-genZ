@@ -1,6 +1,6 @@
 export const userSignup = (request, response) => {
     try{
-        console.log(request, body);
+        console.log(request.body);
     } catch (error) {
 
     }

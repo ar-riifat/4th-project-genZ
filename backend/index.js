@@ -10,6 +10,7 @@ const app = express();
 
 dotenv.config();
 
+app.use(cors());
 app.use('/', Router);
 
 const PORT = 8000
