@@ -33,12 +33,12 @@ const userSchema = new mongoose.Schema({
     },
     password : {
         type: string ,
-        required: true,
+        required: true
     },
     phone: {
         type: string ,
-        required: true,
-    },
+        required: true
+    }
 
 });
 const user = mongoose.model('user', userSchema);
