@@ -43,7 +43,11 @@ const CustomButtons = () => {
 
     return(
         <Wrapper >
-        <   LoginButton  variant="contained" onClick={() => openDialog()}>Login</LoginButton>
+            {
+                account ? <Typography>{account}</Typography>:
+                <LoginButton  variant="contained" onClick={() => openDialog()}>Login</LoginButton>
+            }
+        
                 <Typography style={{marginTop: 10, width:135}}>Become a Seller</Typography>
                 <Typography style={{marginTop: 10}}>About</Typography>
                 <Container>
