@@ -1,23 +1,23 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 
 const userSchema = new mongoose.Schema({
     firstname: {
-        type: string ,
+        type: String ,
         required: true,
         trim: true,
         min: 5,
         max: 20
     },
     lastname: {
-        type: string ,
+        type: String ,
         required: true,
         trim: true,
         min: 5,
         max: 20
     },
     username: {
-        type: string ,
+        type: String ,
         required: true,
         trim: true,
         unique: true,
@@ -25,18 +25,18 @@ const userSchema = new mongoose.Schema({
         lowercase: true
     },
     email: {
-        type: string ,
+        type: String ,
         required: true,
         trim: true,
         unique: true,
         lowercase: true
     },
     password : {
-        type: string ,
+        type: String ,
         required: true
     },
     phone: {
-        type: string ,
+        type: String ,
         required: true
     }
 
