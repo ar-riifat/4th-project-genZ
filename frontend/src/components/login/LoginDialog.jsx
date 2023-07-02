@@ -1,6 +1,6 @@
 import { useState } from "react";
  
-import {authenticateSignup} from "../../../../backend/api";
+import {authenticateSignup} from "../../service/api";
 
 import { Box, Dialog,TextField,Button, Typography,styled} from "@mui/material"; 
 
