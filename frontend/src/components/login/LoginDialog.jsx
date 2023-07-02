@@ -1,18 +1,15 @@
 import { useState } from "react";
-
+ 
+import {authenticateSignup} from "../../../../backend/api";
 
 import { Box, Dialog,TextField,Button, Typography,styled} from "@mui/material"; 
-
-
-import { authenticateSignup } from "../../../../backend/api";
-import { Sign } from "crypto";
 
 const Component= styled(Box)`
 height:70vh;
 width:90vh;`
 
 const Image=styled(Box)`
-background:#20b2aa url(tr.web)center 85% no-repeat;
+background:#20b2aa url(tr.webp)center 85% no-repeat;
 height:83%;
 width:40%;
 padding : 45px 35px;
@@ -104,10 +101,11 @@ const onInputChange = (e) => {
     
 }
 
-const signupUser = async () => {
-  let response = await authenticateSignup(signup);
+const signupUser =async() => {
+    let response = await authenticateSignup(signup);
+   
+    
 }
-
 
     return(
         <Dialog open={open} onClose={handleClose} PaperProps={{sx:{maxWidth:'unset'}}}>
@@ -128,7 +126,7 @@ const signupUser = async () => {
              <LoginButton>Login</LoginButton>
              <Typography style={{textAlign:'center'}}>OR</Typography>
              <RequestOTP>Request OTP</RequestOTP>
-             <CreateAccount onClick={() => toggleSignup()}>New to Flipkart? Create an account</CreateAccount>
+             <CreateAccount onClick={() => toggleSignup()}>New to Magna? Create an account</CreateAccount>
              
              </Wrapper>
 
@@ -143,7 +141,7 @@ const signupUser = async () => {
                     <TextField variant="standard" onChange={(e) => onInputChange(e)} name='password' label='Enter Password' />
                     <TextField variant="standard" onChange={(e) => onInputChange(e)} name='phone' label='Enter Phone' />
     
-             <LoginButton>Continue</LoginButton>
+                    <LoginButton onClick={() => signupUser()} >Continue</LoginButton>
             
 
             </Wrapper>
