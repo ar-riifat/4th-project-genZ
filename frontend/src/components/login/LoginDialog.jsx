@@ -103,7 +103,8 @@ const onInputChange = (e) => {
 
 const signupUser =async() => {
     let response = await authenticateSignup(signup);
-    Console.log(response);
+    if (!response) return;
+    handleClose();
    
     
 }
