@@ -8,6 +8,7 @@ export const data = {                                  //data=object, users=prop
         email: 'a@gmail.com',
         password: 'Pass890',
         phone: '67802456898',
+        /
       },
     ],
   };
