@@ -1,5 +1,4 @@
 
-
 import Banner from './Banner';
 
 const Home = ()=>{
