@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.0-placeholder-for-preset-env.2",
-    "eslint-plugin-jest": "^26.6.2"
+    "eslint-plugin-jest": "^26.9.0"
   },
   "scripts": {
     "start": "set PORT=3000 && react-scripts start",
@@ -31,13 +31,14 @@
     "extends": "eslint-config-react-app",
     "overrides": [
       {
-        "files": ["**/*.test.js"],
+        "files": [
+          "**/*.test.js"
+        ],
         "env": {
           "jest/globals": true
         }
       }
     ]
-
   },
   "browserslist": {
     "production": [
