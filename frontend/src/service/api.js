@@ -18,4 +18,4 @@ export const authenticateLogin = async (user) => {
     } catch (error) {
         console.log('Error while calling login API: ', error);
     }
-}
+} 

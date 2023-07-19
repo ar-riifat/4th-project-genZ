@@ -3,12 +3,13 @@ export const data = {                                  //data=object, users=prop
     users: [
       {
         firstname: 'anis',
-        lastname: 'nuh678',
-        username: 'alex',
-        email: 'a@gmail.com',
+        lastname: 'anis1',
+        username: 'anis1',
+        email: 'arrifat40@gmail.com',
         password: 'Pass890',
         phone: '67802456898',
         
       },
     ],
   };
+  
