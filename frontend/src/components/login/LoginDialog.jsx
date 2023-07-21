@@ -7,6 +7,7 @@ import { Box, Dialog,TextField,Button, Typography,styled} from "@mui/material";
 import { DataContext } from "../../context/DataProvider";
 
 
+
 const Component= styled(Box)`
 height:70vh;
 width:90vh;`
@@ -58,6 +59,14 @@ const CreateAccount = styled(Typography)`
     font-weight: 600;
     font-size: 14px;
     cursor: pointer
+`;
+
+const Error = styled(Typography)`
+    font-size: 10px;
+    color: #FF0000;
+    line-hight: 0;
+    margin-top: 10px;
+    font-weight: 600;
 `
 const accountInitialValues = {
     login :{
@@ -95,12 +104,13 @@ const LoginDialog =({open,setOpen}) =>{
 const [account, toggleAccount]= useState(accountInitialValues.login);
 const [ signup, setSignup ] = useState(signupInitialValues);
 const [ login, setLogin ] = useState(loginInitialValues);
-const [ error ] = useState(false);
+const [ error,setError ] = useState(false);
 
 const {setAccount} = useContext(DataContext);
 const handleClose =()=>{
     setOpen(false);
     toggleAccount(accountInitialValues.login);
+    setError(false);
 }
 
 const toggleSignup = () => {
@@ -130,7 +140,10 @@ const loginUser =async() => {
     console.log(response);
     if (response.status === 200) {
         handleClose();
-        setAccount(login.username);
+        setAccount(response.data.data.firstname);
+    }
+    else{
+        setError(true);
     }
 } 
 
@@ -149,7 +162,7 @@ const loginUser =async() => {
                 <Wrapper>
 
              <TextField variant="standard" onChange={(e) => onValueChange(e)} name='username' label="Enter Username"/>
-             {error && <Typography>please enter valid username or password</Typography>}
+             {error && <Error>please enter valid username or password</Error>}
              <TextField variant="standard" onChange={(e) => onValueChange(e)} name='password' label="Enter password"/>
              <Text>By continuing, you agree to our's Terms of Use and Privacy Policy.</Text>
              <LoginButton onClick={() => loginUser()}>Login</LoginButton>
