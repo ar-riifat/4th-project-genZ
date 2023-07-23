@@ -9,7 +9,7 @@ const StyledHeader = styled(AppBar)({
 
 const Component = styled(Box)({
   marginLeft: '12%',
-  lineheight:0,
+  lineheight: 0,
 });
 
 

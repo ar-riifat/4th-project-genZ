@@ -90,6 +90,7 @@ const signupInitialValues = {
     username: '',
     email: '',
     password: '',
+    confirmpassword: '',
     phone: ''
 };
 const loginInitialValues = {
@@ -115,6 +116,9 @@ const handleClose =()=>{
 
 const toggleSignup = () => {
     toggleAccount(accountInitialValues.signup);
+}
+const togglelogin = () => {
+    toggleAccount(accountInitialValues.login);
 }
 
 const onInputChange = (e) => {
@@ -181,9 +185,11 @@ const loginUser =async() => {
                     <TextField variant="standard" onChange={(e) => onInputChange(e)} name='username' label='Enter Username' />
                     <TextField variant="standard" onChange={(e) => onInputChange(e)} name='email' label='Enter Email' />
                     <TextField variant="standard" onChange={(e) => onInputChange(e)} name='password' label='Enter Password' />
+                    <TextField variant="standard" onChange={(e) => onInputChange(e)} name='confirmpassword' label='Enter confirm Password' />
                     <TextField variant="standard" onChange={(e) => onInputChange(e)} name='phone' label='Enter Phone' />
     
                     <LoginButton onClick={() => signupUser()} >Continue</LoginButton>
+                    <CreateAccount onClick={() => togglelogin()}>Existing User? Log in</CreateAccount>
             
 
             </Wrapper>
